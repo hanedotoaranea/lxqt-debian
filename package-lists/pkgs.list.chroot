@@ -1,22 +1,21 @@
+# Драйверы устройств
 firmware-linux-nonfree
 firmware-iwlwifi
 firmware-realtek
 firmware-atheros
 firmware-intel-sound
 firmware-amd-graphics
+# Графическая подсистема
 xorg
-xserver-xorg-video-all
-xserver-xorg-input-all
-xf86-input-synaptics
+xserver-xorg-input-libinput
 libinput-tools
+# Управление питанием
 tlp
 tlp-rdw
-laptop-mode-tools
 powertop
 thermald
 cpufrequtils
-xbacklight
-brightnessctl
+# Окружение LXQt
 lxqt-core
 lxqt-panel
 lxqt-session
@@ -28,46 +27,7 @@ lxqt-themes
 pcmanfm-qt
 qterminal
 sddm
-xscreensaver
-xfwm4
-vlc
-mpv
-audacious
-ffmpeg
-gstreamer1.0-libav
-gstreamer1.0-plugins-good
-gstreamer1.0-plugins-bad
-gstreamer1.0-plugins-ugly
-libavcodec-extra
-libdvd-pkg
-libbluray2
-pavucontrol-qt
-firefox-esr
-chromium
-network-manager
-network-manager-gnome
-net-tools
-transmission-gtk
-calibre
-fbreader
-mousepad
-htop
-lm-sensors
-neofetch
-file-roller
-p7zip-full
-p7zip-rar
-unrar
-unzip
-zip
-xz-utils
-bzip2
-gparted
-ntfs-3g
-build-essential
-nano
-man-db
-locales
+# Внешний вид
 breeze
 papirus-icon-theme
 arc-theme
@@ -76,3 +36,63 @@ fonts-liberation
 fonts-dejavu
 fonts-noto
 ttf-mscorefonts-installer
+# Системные утилиты
+htop
+lm-sensors
+psensor
+neofetch
+mousepad
+nano
+man-db
+locales
+# Мультимедиа
+vlc
+mpv
+audacious
+ffmpeg
+gstreamer1.0-libav
+gstreamer1.0-plugins-good
+gstreamer1.0-plugins-bad
+gstreamer1.0-plugins-ugly
+gstreamer1.0-plugins-base
+gstreamer1.0-x
+libavcodec-extra
+libbluray2
+libdvd-pkg
+pavucontrol-qt
+# Интернет и сеть
+firefox-esr
+chromium
+vivaldi-stable
+thunderbird
+transmission-gtk
+qbittorrent
+network-manager
+network-manager-gnome
+net-tools
+# Офис и чтение
+libreoffice
+libreoffice-l10n-ru
+calibre
+fbreader
+okular
+# Архиваторы и файлы
+file-roller
+p7zip-full
+p7zip-rar
+unrar
+unzip
+zip
+xz-utils
+bzip2
+# Диски и файловые системы
+gparted
+ntfs-3g
+# Дополнительные приложения
+keepassxc
+viewnior
+rhythmbox
+clementine
+kodi
+brightnessctl
+xbacklight
