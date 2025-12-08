@@ -1,12 +1,10 @@
-
 lb config -d bookworm \
-          --distribution bookworm 
           --debian-installer live \
           --debian-installer-distribution bookworm \
           --debian-installer-gui true \
-          --distribution "bookworm" \
+          --archive-areas "main contrib non-free" \
+          --debootstrap-options "--variant=minbase" \
           --architectures amd64 \
-          --binary-images iso-hybrid \
           --iso-volume "Alice_$(date +%Y%m%d)" \  
           --archive-areas "main contrib non-free non-free-firmware" \
           --debootstrap-options "--variant=standard --include=sudo,locales,keyboard-configuration" \
