@@ -1,4 +1,6 @@
 linux-image-amd64
+amd64-microcode
+intel-microcode
 firmware-linux
 firmware-linux-nonfree
 firmware-iwlwifi
@@ -98,7 +100,6 @@ udftools
 xorriso
 nfs-common
 sshfs
-fuse
 fuse3
 btrfs-progs
 xfsprogs
