@@ -1,7 +1,7 @@
  lb config -d trixie \
           --debian-installer true \
           --debian-installer-gui true \
-          --debootstrap-options "--variant=minbase" \
+          --debootstrap-options "--variant=standard" \
           --architectures amd64 \
           --iso-volume "Alice_$(date +%Y%m%d)" \
           --archive-areas "main contrib non-free non-free-firmware" \
