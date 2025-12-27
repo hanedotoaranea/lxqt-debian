@@ -1,11 +1,11 @@
 lb config --distribution bullseye \
 --architectures amd64 \
---binary-images iso-hybrid \
---system live \
+--binary-images iso \
+--system normal \  # НЕ live, а обычная система
 --mode debian \
---debian-installer cdrom \ 
+--debian-installer cdrom \  # Обычный установочный CD/DVD
 --debian-installer-distribution bullseye \
---debian-installer-gui false \ 
+--debian-installer-gui false \  # Текстовый установщик
 --archive-areas "main contrib non-free" \
 --mirror-bootstrap http://deb.debian.org/debian \
 --mirror-binary http://deb.debian.org/debian \
@@ -23,27 +23,23 @@ lb config --distribution bullseye \
 --iso-volume "Alice_$(date +%Y%m%d)" \
 --iso-publisher "hanedotoaranea - https://github.com/hanedotoaranea" \
 --iso-application "GitHub:https://github.com/hanedotoaranea/" \
---bootappend-live "boot=live components quiet splash" \
 --bootappend-install "debian-installer/language=ru console-setup/layoutcode=ru" \
---bootloaders "syslinux grub-efi" \
---uefi-secure-boot auto \
---memtest memtest86+ \
+--bootloaders syslinux \
+--memtest none \
 --linux-flavours amd64 \
 --linux-packages "linux-image linux-headers" \
 --initsystem systemd \
---initramfs live-boot \
---initramfs-compression gzip \
+--initramfs none \  # Без live-boot
 --compression gzip \
 --checksums sha256 \
---zsync true \
+--zsync false \
 --debconf-frontend noninteractive \
 --debconf-priority critical \
 --apt apt \
 --apt-options "--yes" \
 --apt-secure true \
 --apt-source-archives false \
---chroot-filesystem squashfs \
---chroot-squashfs-compression-type xz \
+--chroot-filesystem plain \  # Простая файловая система
 --parent-archive-areas "main contrib non-free" \
 --parent-mirror-bootstrap http://deb.debian.org/debian \
 --parent-mirror-binary http://deb.debian.org/debian \
